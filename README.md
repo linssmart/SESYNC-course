@@ -1,2 +1,6 @@
 # SESYNC-course
-SESYNC ABM course
+Goals
+
+
+-Learn to write Spatial AGMs!
+
