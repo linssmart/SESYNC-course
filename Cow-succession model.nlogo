@@ -45,7 +45,7 @@ to eat-grass
   ask turtles [
     if pcolor = green [
       set pcolor black
-      set energy energy-from-grass
+      set energy energy + energy-from-grass
     ]
     ifelse show-energy?
     [set label energy ]
@@ -84,7 +84,6 @@ to regrow-grass
    ]
   ]
 end
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 210
@@ -176,7 +175,7 @@ SWITCH
 336
 show-energy?
 show-energy?
-1
+0
 1
 -1000
 
@@ -197,7 +196,8 @@ true
 "" ""
 PENS
 "turtles" 1.0 0 -16777216 true "" "plot count turtles"
-"patches" 1.0 0 -13840069 true "" "plot count patches with [pcolor = green ]"
+"mature grass" 1.0 0 -13840069 true "" "plot count patches with [pcolor = green ]"
+"young grass" 1.0 0 -1184463 true "" "plot count patches with [pcolor = yellow ]"
 
 SLIDER
 7
@@ -208,7 +208,7 @@ number-of-turtles
 number-of-turtles
 0
 100
-24
+100
 1
 1
 NIL
@@ -223,7 +223,7 @@ energy-from-grass
 energy-from-grass
 0
 100
-50
+11
 1
 1
 NIL
@@ -238,7 +238,7 @@ birth-energy
 birth-energy
 0
 100
-15
+25
 1
 1
 NIL
@@ -264,7 +264,7 @@ grass-regrowth-time
 grass-regrowth-time
 0
 100
-9
+10
 1
 1
 NIL
